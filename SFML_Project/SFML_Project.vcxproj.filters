@@ -1,0 +1,687 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\res">
+      <UniqueIdentifier>{9caaf23f-6e78-4f31-8ce5-53e2366cde62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\res\system">
+      <UniqueIdentifier>{2e240b7b-fe3e-4cb0-8568-549dba7eb67f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific">
+      <UniqueIdentifier>{8dfa39af-49a3-418c-8d68-914128eb8e16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{2dcd4d0d-46e0-4294-b05b-ea200c993e6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Resource">
+      <UniqueIdentifier>{7b880664-06d3-4e2e-8aef-64b8558a397e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Components">
+      <UniqueIdentifier>{51adea10-06e8-472d-96f5-3798e7bd1d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Graphics">
+      <UniqueIdentifier>{c3a07515-7cef-466b-87bf-f4890ab73eb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\State">
+      <UniqueIdentifier>{b1bd4d93-1eab-4f08-95a8-8c174e8f8e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Util">
+      <UniqueIdentifier>{98995440-a8d5-47e0-8540-f65da2d78a01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Entity">
+      <UniqueIdentifier>{0c3b5491-97ea-4f93-850d-d3e5f7250f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\GUI">
+      <UniqueIdentifier>{db200fcb-9e5c-47d7-8586-cd6cde507c69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\States">
+      <UniqueIdentifier>{be930a78-6eb1-4361-96a2-668d9f36c8f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Lua">
+      <UniqueIdentifier>{36ce69b0-851b-4805-b10c-d392e78949c3}</UniqueIdentifier>
+      <Extensions>*.lua</Extensions>
+    </Filter>
+    <Filter Include="Source Files\pugixml">
+      <UniqueIdentifier>{ad79d318-ce28-4b30-876b-9163df44ed83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Event">
+      <UniqueIdentifier>{3308dc4f-1c96-4695-960e-5618850f4d04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Process">
+      <UniqueIdentifier>{e0a2973a-4dda-4246-aa05-d812935964f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Components">
+      <UniqueIdentifier>{e4576801-997b-4735-831b-794db0868e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Event">
+      <UniqueIdentifier>{45bc64b1-f956-4748-a94b-53bc6f3b86a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Event\Global Events">
+      <UniqueIdentifier>{9f113cc5-1efa-46db-a202-e8b3ef65e545}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Components\Component Events">
+      <UniqueIdentifier>{96dd69b8-56c8-4c43-a422-5e244b21014a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Components\Derived Types">
+      <UniqueIdentifier>{50936100-21a7-4c3a-bc88-9c1ba28fe1f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Components\Interface Types">
+      <UniqueIdentifier>{3f489f92-4279-4d0e-a66b-5316a317af08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Process">
+      <UniqueIdentifier>{a5c5f2f6-b08a-41c0-8a47-55e325c6c6c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Process\Processes">
+      <UniqueIdentifier>{655f41a5-dbca-492b-93a8-2cf30bc68829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Resource">
+      <UniqueIdentifier>{3280f354-f8c8-445d-a64b-f97c9df6ee95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Resource\Game Resources">
+      <UniqueIdentifier>{7fad50d7-a92d-45f7-a6d8-e0b18b5b3f0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\GUI">
+      <UniqueIdentifier>{52ff893d-e935-43c8-ae4f-c82a969e9a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Map">
+      <UniqueIdentifier>{3b6e7cb3-341c-4637-9a6e-41710a9f6278}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Shader">
+      <UniqueIdentifier>{e5cc3ad7-841a-4c34-ada8-47e128cb2dbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Game">
+      <UniqueIdentifier>{2c28b7c0-66b2-4b8d-9e9c-5bc347e2bd56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\Transitions">
+      <UniqueIdentifier>{d50f73c4-c661-423a-a06a-30fa2fe39bff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\Game_Specific</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedSprite.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="StateBasedGame.cpp">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Source Files\Engine\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="MultiResCache.cpp">
+      <Filter>Source Files\Engine\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="MainMenuState.cpp">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClCompile>
+    <ClCompile Include="OverlayTestState.cpp">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClCompile>
+    <ClCompile Include="MapState.cpp">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClCompile>
+    <ClCompile Include="ParallaxPlane.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Random.cpp">
+      <Filter>Source Files\Engine\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="QuadTreeNode.cpp">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapLoaderPrivate.cpp">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="MapLoaderPublic.cpp">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="pugixml\pugixml.cpp">
+      <Filter>Source Files\pugixml</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectFactory.cpp">
+      <Filter>Source Files\Engine\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorPhysicsComponent.cpp">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClCompile>
+    <ClCompile Include="ActorSpriteComponent.cpp">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionComponent.cpp">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerControlComponent.cpp">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClCompile>
+    <ClCompile Include="RandomMoveComponent.cpp">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessMananger.cpp">
+      <Filter>Source Files\Engine\Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Component.cpp">
+      <Filter>Source Files\Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Source Files\Game_Specific\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowSelectable.cpp">
+      <Filter>Source Files\Game_Specific\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEventDispatcher.cpp">
+      <Filter>Source Files\Engine\Event</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyState.cpp">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClCompile>
+    <ClCompile Include="EmptyTransition.cpp">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeOutTransition.cpp">
+      <Filter>Source Files\Game_Specific\Transitions</Filter>
+    </ClCompile>
+    <ClCompile Include="FadeInTransition.cpp">
+      <Filter>Source Files\Game_Specific\Transitions</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscSpinLoadScreen.cpp">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandComponent.cpp">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClCompile>
+    <ClCompile Include="EditorState.cpp">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClCompile>
+    <ClCompile Include="MapObjectComponent.cpp">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionShape.cpp">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sansation.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\!$%[9]yuan_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\001-Fighter01.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\003-Fighter03.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\040-Tower02.jpg">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\092-Monster06!.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\092-Monster06.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\098-Monster12.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Actor1b.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\aster_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\battler_base.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Cobblestones3.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\DecorativeTile.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Evil.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\fire1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\fire2.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\gunslinger_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\jackall.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\kasier_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\light_512.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\light16.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\lighting_radial.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\lighting_sprites.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\lighting_sprites_original.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\LightRays.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\LightRays1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\LightRays1_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\mutsu.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\mutsu_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Mutsu_2.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\newimage.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Outside_A2.xcf">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\People1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\player.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\slime.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\snake_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\spearman_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Spiritual.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\steampunk_m4.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\Temple.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\TitleBack.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\wanderer.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\yuan_1.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\yuan_2.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\yuan_3.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\yuan720_test.png">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="res\system\Blue.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Boroque.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Chalk.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\cursor.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\cursor.xcf">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\deadlydanblueaf2.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Grey.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\IconSet.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\mysterons.fnt">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\mysterons.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\mysterons2.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Neo Classic Battle.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Neo Classic.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Neo Classic2.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\SteamPunk.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\umeplusbold.fnt">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\umeplusbold.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\umeplusgrad.fnt">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\umeplusgrad.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\vlpgothic.fnt">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\vlpgothic.hiero">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\vlpgothic.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Window.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Window_b_00.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Window_c_00.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\system\Windows_Aero_Blue.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\actor1m.png">
+      <Filter>Resource Files\res\system</Filter>
+    </None>
+    <None Include="res\Shoguns Clan.ttf">
+      <Filter>Resource Files\res</Filter>
+    </None>
+    <None Include="lua\SceneMenu.lua">
+      <Filter>Source Files\Game_Specific\Lua</Filter>
+    </None>
+    <None Include="lua\SceneMap.lua">
+      <Filter>Source Files\Game_Specific\Lua</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MultiResCache.h">
+      <Filter>Source Files\Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResHandle.h">
+      <Filter>Source Files\Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="ResCache.h">
+      <Filter>Source Files\Engine\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Animation.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSprite.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="IGame.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Transition.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="IGameState.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="StateBasedGame.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Source Files\Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Source Files\Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="MainMenuState.h">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClInclude>
+    <ClInclude Include="OverlayTestState.h">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClInclude>
+    <ClInclude Include="MapState.h">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClInclude>
+    <ClInclude Include="ParallaxPlane.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineStd.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="IMoveComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Interface Types</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveComponentBase.h">
+      <Filter>Source Files\Game_Specific\Components\Interface Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Random.h">
+      <Filter>Source Files\Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="QuadTreeNode.h">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers.h">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapLoader.h">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml\pugiconfig.hpp">
+      <Filter>Source Files\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="pugixml\pugixml.hpp">
+      <Filter>Source Files\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="MoveEvent.h">
+      <Filter>Source Files\Game_Specific\Components\Component Events</Filter>
+    </ClInclude>
+    <ClInclude Include="SizeChangedEvent.h">
+      <Filter>Source Files\Game_Specific\Components\Component Events</Filter>
+    </ClInclude>
+    <ClInclude Include="DrawEvent.h">
+      <Filter>Source Files\Game_Specific\Components\Component Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MapLayer.h">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObjectFactory.h">
+      <Filter>Source Files\Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Registrar.h">
+      <Filter>Source Files\Engine\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionEvent.h">
+      <Filter>Source Files\Game_Specific\Event\Global Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MapChangedEvent.h">
+      <Filter>Source Files\Game_Specific\Event\Global Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Function.h">
+      <Filter>Source Files\Engine\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="TriggerEnteredEvent.h">
+      <Filter>Source Files\Game_Specific\Event\Global Events</Filter>
+    </ClInclude>
+    <ClInclude Include="EventDispatcher.h">
+      <Filter>Source Files\Engine\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="ProcessManager.h">
+      <Filter>Source Files\Engine\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorPhysicsComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="ActorSpriteComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectionComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaceHolderComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerControlComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomMoveComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="HeadingChangedEvent.h">
+      <Filter>Source Files\Game_Specific\Components\Component Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Process.h">
+      <Filter>Source Files\Engine\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="DelayProcess.h">
+      <Filter>Source Files\Game_Specific\Process\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="Component.h">
+      <Filter>Source Files\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="ComponentBase.h">
+      <Filter>Source Files\Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowSkinRes.h">
+      <Filter>Source Files\Game_Specific\Resource\Game Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Source Files\Game_Specific\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowSelectable.h">
+      <Filter>Source Files\Game_Specific\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEventDispatcher.h">
+      <Filter>Source Files\Engine\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventListener.h">
+      <Filter>Source Files\Engine\Event</Filter>
+    </ClInclude>
+    <ClInclude Include="EventProcess.h">
+      <Filter>Source Files\Engine\Process</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageProcess.h">
+      <Filter>Source Files\Game_Specific\Process\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowCommand.h">
+      <Filter>Source Files\Game_Specific\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyPressedEvent.h">
+      <Filter>Source Files\Game_Specific\Event\Global Events</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyState.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="EmptyTransition.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeOutTransition.h">
+      <Filter>Source Files\Game_Specific\Transitions</Filter>
+    </ClInclude>
+    <ClInclude Include="FadeInTransition.h">
+      <Filter>Source Files\Game_Specific\Transitions</Filter>
+    </ClInclude>
+    <ClInclude Include="ILoadScreen.h">
+      <Filter>Source Files\Engine\State</Filter>
+    </ClInclude>
+    <ClInclude Include="DiscSpinLoadScreen.h">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClInclude>
+    <ClInclude Include="ThreadInfo.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorState.h">
+      <Filter>Source Files\Game_Specific\States</Filter>
+    </ClInclude>
+    <ClInclude Include="RepaintEvent.h">
+      <Filter>Source Files\Game_Specific\Components\Component Events</Filter>
+    </ClInclude>
+    <ClInclude Include="GameLogic.h">
+      <Filter>Source Files\Game_Specific\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEnd.h">
+      <Filter>Source Files\Game_Specific\Process\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandEndedEvent.h">
+      <Filter>Source Files\Game_Specific\Event\Global Events</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerColorRandomizer.h">
+      <Filter>Source Files\Game_Specific\Process\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="TypeId.h">
+      <Filter>Source Files\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandStart.h">
+      <Filter>Source Files\Game_Specific\Process\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandBranch.h">
+      <Filter>Source Files\Game_Specific\Process\Processes</Filter>
+    </ClInclude>
+    <ClInclude Include="MapTile.h">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="MapObjectComponent.h">
+      <Filter>Source Files\Game_Specific\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionShape.h">
+      <Filter>Source Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="IPhysicsComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Interface Types</Filter>
+    </ClInclude>
+    <ClInclude Include="PhysicsComponentBase.h">
+      <Filter>Source Files\Game_Specific\Components\Interface Types</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleSpriteComponent.h">
+      <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

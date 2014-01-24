@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|Win32">
+      <Configuration>Profile</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Profile|x64">
+      <Configuration>Profile</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDebug|Win32">
+      <Configuration>ReleaseDebug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDebug|x64">
+      <Configuration>ReleaseDebug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2334647F-B000-4D9C-ABED-30C5EF2E02F6}</ProjectGuid>
+    <RootNamespace>SFML_Project</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\Debug;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Users\Kieran\Desktop\SFML-2.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kieran\Desktop\SFML-2.1\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|Win32'">
+    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>C:\Users\Kieran\Desktop\SFML-2.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kieran\Desktop\SFML-2.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <IncludePath>C:\Users\Kieran\Desktop\SFML-2.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kieran\Desktop\SFML-2.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|x64'">
+    <IncludePath>C:\Users\Kieran\Desktop\SFML-2.1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Kieran\Desktop\SFML-2.1\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;DEBUG;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>tgui-d.lib;zdll.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-system-d.lib;sfml-window-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)opengl32.lib;glu32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\$(Configuration);</AdditionalLibraryDirectories>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;SFML_STATIC;DEBUG;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-graphics-s-d.lib;sfml-audio-s-d.lib;sfml-system-s-d.lib;sfml-window-s-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>tgui.lib;zdll.lib;sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;sfml-window.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)opengl32.lib;glu32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\$(Configuration);</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>DEBUG;SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>tgui-s.lib;zdll.lib;sfml-graphics-s.lib;sfml-audio-s.lib;sfml-system-s.lib;sfml-window-s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)opengl32.lib;glu32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\$(Configuration)\lib;$(SolutionDir)\References\SFML-2.1\lib\$(Configuration);</AdditionalLibraryDirectories>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>DEBUG;SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>tgui-s.lib;zdll.lib;sfml-graphics-s.lib;sfml-audio-s.lib;sfml-system-s.lib;sfml-window-s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)opengl32.lib;glu32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\$(Configuration)\lib;$(SolutionDir)\References\SFML-2.1\lib\$(Configuration);</AdditionalLibraryDirectories>
+      <Profile>false</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics-s.lib;sfml-audio-s.lib;sfml-system-s.lib;sfml-window-s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics-s.lib;sfml-audio-s.lib;sfml-system-s.lib;sfml-window-s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-graphics-s.lib;sfml-audio-s.lib;sfml-system-s.lib;sfml-window-s.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActorPhysicsComponent.cpp" />
+    <ClCompile Include="ActorSpriteComponent.cpp" />
+    <ClCompile Include="AnimatedSprite.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="CollisionShape.cpp" />
+    <ClCompile Include="CommandComponent.cpp" />
+    <ClCompile Include="Component.cpp" />
+    <ClCompile Include="DirectionComponent.cpp" />
+    <ClCompile Include="DiscSpinLoadScreen.cpp" />
+    <ClCompile Include="EditorState.cpp" />
+    <ClCompile Include="EmptyState.cpp" />
+    <ClCompile Include="EmptyTransition.cpp" />
+    <ClCompile Include="FadeInTransition.cpp" />
+    <ClCompile Include="FadeOutTransition.cpp" />
+    <ClCompile Include="GameEventDispatcher.cpp" />
+    <ClCompile Include="GameObjectFactory.cpp" />
+    <ClCompile Include="MapLoaderPrivate.cpp" />
+    <ClCompile Include="MapLoaderPublic.cpp" />
+    <ClCompile Include="MapObjectComponent.cpp" />
+    <ClCompile Include="MapState.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainMenuState.cpp" />
+    <ClCompile Include="MultiResCache.cpp" />
+    <ClCompile Include="OverlayTestState.cpp" />
+    <ClCompile Include="ParallaxPlane.cpp" />
+    <ClCompile Include="PlayerControlComponent.cpp" />
+    <ClCompile Include="ProcessMananger.cpp" />
+    <ClCompile Include="pugixml\pugixml.cpp" />
+    <ClCompile Include="QuadTreeNode.cpp" />
+    <ClCompile Include="Random.cpp" />
+    <ClCompile Include="RandomMoveComponent.cpp" />
+    <ClCompile Include="StateBasedGame.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="WindowSelectable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lua\SceneMap.lua">
+      <FileType>Script</FileType>
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="lua\SceneMenu.lua">
+      <DeploymentContent>true</DeploymentContent>
+      <FileType>Script</FileType>
+    </None>
+    <None Include="res\!$%[9]yuan_1.png" />
+    <None Include="res\001-Fighter01.png" />
+    <None Include="res\003-Fighter03.png" />
+    <None Include="res\040-Tower02.jpg" />
+    <None Include="res\092-Monster06!.png" />
+    <None Include="res\092-Monster06.png" />
+    <None Include="res\098-Monster12.png" />
+    <None Include="res\Actor1b.png" />
+    <None Include="res\actor1m.png" />
+    <None Include="res\aster_1.png" />
+    <None Include="res\battler_base.png" />
+    <None Include="res\Cobblestones3.png" />
+    <None Include="res\DecorativeTile.png" />
+    <None Include="res\Evil.png" />
+    <None Include="res\fire1.png" />
+    <None Include="res\fire2.png" />
+    <None Include="res\gunslinger_1.png" />
+    <None Include="res\jackall.png" />
+    <None Include="res\kasier_1.png" />
+    <None Include="res\light16.png" />
+    <None Include="res\lighting_radial.png" />
+    <None Include="res\lighting_sprites.png" />
+    <None Include="res\lighting_sprites_original.png" />
+    <None Include="res\LightRays.png" />
+    <None Include="res\LightRays1.png" />
+    <None Include="res\LightRays1_1.png" />
+    <None Include="res\light_512.png" />
+    <None Include="res\mutsu.png" />
+    <None Include="res\mutsu_1.png" />
+    <None Include="res\Mutsu_2.png" />
+    <None Include="res\newimage.png" />
+    <None Include="res\Outside_A2.xcf" />
+    <None Include="res\People1.png" />
+    <None Include="res\player.png" />
+    <None Include="res\Shoguns Clan.ttf" />
+    <None Include="res\slime.png" />
+    <None Include="res\snake_1.png" />
+    <None Include="res\spearman_1.png" />
+    <None Include="res\Spiritual.png" />
+    <None Include="res\steampunk_m4.png" />
+    <None Include="res\system\Blue.png" />
+    <None Include="res\system\Boroque.png" />
+    <None Include="res\system\Chalk.png" />
+    <None Include="res\system\cursor.png" />
+    <None Include="res\system\cursor.xcf" />
+    <None Include="res\system\deadlydanblueaf2.png" />
+    <None Include="res\system\Grey.png" />
+    <None Include="res\system\IconSet.png" />
+    <None Include="res\system\mysterons.fnt" />
+    <None Include="res\system\mysterons.png" />
+    <None Include="res\system\mysterons2.png" />
+    <None Include="res\system\Neo Classic Battle.png" />
+    <None Include="res\system\Neo Classic.png" />
+    <None Include="res\system\Neo Classic2.png" />
+    <None Include="res\system\SteamPunk.png" />
+    <None Include="res\system\umeplusbold.fnt" />
+    <None Include="res\system\umeplusbold.png" />
+    <None Include="res\system\umeplusgrad.fnt" />
+    <None Include="res\system\umeplusgrad.png" />
+    <None Include="res\system\vlpgothic.fnt" />
+    <None Include="res\system\vlpgothic.hiero" />
+    <None Include="res\system\vlpgothic.png" />
+    <None Include="res\system\Window.png" />
+    <None Include="res\system\Windows_Aero_Blue.png" />
+    <None Include="res\system\Window_b_00.png" />
+    <None Include="res\system\Window_c_00.png" />
+    <None Include="res\Temple.png" />
+    <None Include="res\TitleBack.png" />
+    <None Include="res\wanderer.png" />
+    <None Include="res\yuan720_test.png" />
+    <None Include="res\yuan_1.png" />
+    <None Include="res\yuan_2.png" />
+    <None Include="res\yuan_3.png" />
+    <None Include="sansation.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActorSpriteComponent.h" />
+    <ClInclude Include="AnimatedSprite.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="BattleSpriteComponent.h" />
+    <ClInclude Include="CommandBranch.h" />
+    <ClInclude Include="CommandComponent.h" />
+    <ClInclude Include="CommandEnd.h" />
+    <ClInclude Include="CommandEndedEvent.h" />
+    <ClInclude Include="CommandStart.h" />
+    <ClInclude Include="CollisionShape.h" />
+    <ClInclude Include="IPhysicsComponent.h" />
+    <ClInclude Include="MapTile.h" />
+    <ClInclude Include="PhysicsComponentBase.h" />
+    <ClInclude Include="PlayerColorRandomizer.h" />
+    <ClInclude Include="DelayProcess.h" />
+    <ClInclude Include="DiscSpinLoadScreen.h" />
+    <ClInclude Include="DrawEvent.h" />
+    <ClInclude Include="EditorState.h" />
+    <ClInclude Include="EmptyState.h" />
+    <ClInclude Include="EmptyTransition.h" />
+    <ClInclude Include="EngineStd.h" />
+    <ClInclude Include="EventDispatcher.h" />
+    <ClInclude Include="EventListener.h" />
+    <ClInclude Include="EventProcess.h" />
+    <ClInclude Include="FadeInTransition.h" />
+    <ClInclude Include="FadeOutTransition.h" />
+    <ClInclude Include="Function.h" />
+    <ClInclude Include="GameEventDispatcher.h" />
+    <ClInclude Include="GameLogic.h" />
+    <ClInclude Include="GameObjectFactory.h" />
+    <ClInclude Include="CollisionEvent.h" />
+    <ClInclude Include="HeadingChangedEvent.h" />
+    <ClInclude Include="Helpers.h" />
+    <ClInclude Include="ILoadScreen.h" />
+    <ClInclude Include="KeyPressedEvent.h" />
+    <ClInclude Include="MapChangedEvent.h" />
+    <ClInclude Include="MapLayer.h" />
+    <ClInclude Include="MapLoader.h" />
+    <ClInclude Include="MapObjectComponent.h" />
+    <ClInclude Include="MapState.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentBase.h" />
+    <ClInclude Include="DirectionComponent.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="IGameState.h" />
+    <ClInclude Include="IGame.h" />
+    <ClInclude Include="IMoveComponent.h" />
+    <ClInclude Include="MainMenuState.h" />
+    <ClInclude Include="MessageProcess.h" />
+    <ClInclude Include="MoveComponentBase.h" />
+    <ClInclude Include="MoveEvent.h" />
+    <ClInclude Include="MultiResCache.h" />
+    <ClInclude Include="OverlayTestState.h" />
+    <ClInclude Include="ParallaxPlane.h" />
+    <ClInclude Include="PlaceHolderComponent.h" />
+    <ClInclude Include="PlayerControlComponent.h" />
+    <ClInclude Include="Process.h" />
+    <ClInclude Include="ProcessManager.h" />
+    <ClInclude Include="pugixml\pugiconfig.hpp" />
+    <ClInclude Include="pugixml\pugixml.hpp" />
+    <ClInclude Include="QuadTreeNode.h" />
+    <ClInclude Include="Random.h" />
+    <ClInclude Include="RandomMoveComponent.h" />
+    <ClInclude Include="Registrar.h" />
+    <ClInclude Include="RepaintEvent.h" />
+    <ClInclude Include="ResCache.h" />
+    <ClInclude Include="ResHandle.h" />
+    <ClInclude Include="SizeChangedEvent.h" />
+    <ClInclude Include="StateBasedGame.h" />
+    <ClInclude Include="ThreadInfo.h" />
+    <ClInclude Include="Transition.h" />
+    <ClInclude Include="TriggerEnteredEvent.h" />
+    <ClInclude Include="TypeId.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="ActorPhysicsComponent.h" />
+    <ClInclude Include="Window.h" />
+    <ClInclude Include="WindowCommand.h" />
+    <ClInclude Include="WindowSelectable.h" />
+    <ClInclude Include="WindowSkinRes.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
