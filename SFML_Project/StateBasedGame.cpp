@@ -254,7 +254,7 @@ void StateBasedGame::run()
 
 	sf::Clock dtimer;
 
-	const float fps = 120;
+	const float fps = 60;
 	const float dt = 1 / fps;
 	float accumulator = 0;
 

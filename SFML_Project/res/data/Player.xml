@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameObject>
+  <component name="ActorPhysicsComponent" value="0,0,400,0.6" />
+  <component name="PlayerControlComponent" value="1"></component>
+  <component name="ActorSpriteComponent" value="res/001-Fighter01.png, false" />
+  <component name="DirectionComponent" value="S" />
+</GameObject>

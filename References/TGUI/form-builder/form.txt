@@ -1,0 +1,57 @@
+Window:
+{
+	ChatBox: "ChatBox1"
+	{
+		ConfigFile = "widgets/White.conf"
+		Left = 100
+		Top = 30
+		Width = 360
+		Height = 200
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		TextSize = 15
+		Borders = (2,2,2,2)
+		BackgroundColor = (255,255,255,255)
+		BorderColor = (0,0,0,255)
+		Lines = ""
+	}
+
+	Scrollbar: "Scrollbar1"
+	{
+		ConfigFile = "widgets/White.conf"
+		Left = 730
+		Top = 0
+		Width = 13
+		Height = 570
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Maximum = 10
+		LowValue = 6
+		Value = 0
+		AutoHide = true
+		VerticalScroll = true
+	}
+
+	Scrollbar: "Scrollbar2"
+	{
+		ConfigFile = "widgets/White.conf"
+		Left = 10
+		Top = 580
+		Width = 770
+		Height = 13
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Maximum = 10
+		LowValue = 6
+		Value = 0
+		AutoHide = true
+		VerticalScroll = false
+	}
+
+}

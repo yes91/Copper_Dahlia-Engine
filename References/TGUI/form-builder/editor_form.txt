@@ -1,0 +1,39 @@
+Window:
+{
+	Scrollbar: ""
+	{
+		ConfigFile = "widgets/White.conf"
+		Left = 1260
+		Top = 10
+		Width = 13
+		Height = 680
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Maximum = 10
+		LowValue = 6
+		Value = 0
+		AutoHide = true
+		VerticalScroll = true
+	}
+
+	Scrollbar: ""
+	{
+		ConfigFile = "widgets/White.conf"
+		Left = 10
+		Top = 690
+		Width = 1240
+		Height = 13
+		Visible = true
+		Enabled = true
+		Transparency = 255
+		CallbackId = 0
+		Maximum = 10
+		LowValue = 6
+		Value = 0
+		AutoHide = true
+		VerticalScroll = false
+	}
+
+}

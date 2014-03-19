@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="50" height="50" tilewidth="64" tileheight="64">
+ <properties>
+  <property name="startPosx" value="24"/>
+  <property name="startPosy" value="25"/>
+ </properties>
+ <tileset firstgid="1" name="Outside_A2" tilewidth="64" tileheight="64">
+  <image source="Outside_A2.png" width="1024" height="960"/>
+ </tileset>
+ <tileset firstgid="241" name="metatiles" tilewidth="64" tileheight="64">
+  <image source="metatiles.png" width="128" height="128"/>
+  <tile id="0">
+   <properties>
+    <property name="blocked" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3SQQqDMBCF4YjkAGpvoPe/g4W23qAexxHiQinFMkJew7/4UMaF72VShRAqAMBOfXKmZM0X03vM8P+rzvnbd/UdbD6dfzzM1Xf0az7l3WzZ4mH2T/u4YkcKztwT5btUYu5Su3TmJpDDazR3gRz0oIciemihh5ZSevRmEMjh9TKTQA6vh3kK5PB6m1kgh0eTtOmZO49Hm+TOQQ8AAAAAKM8CbQ8sSxAnAAA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="50" height="50">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAC+3ROQrAIBAAQDvJo3yRv88LQoqACAabeJCZZo9qjxAAeJNnD/BDPTf3l7ncf31+BAB8JRYxVv2nPodOxC119hjnaOS7sQcAAACwmwv+8M3NECcAAA==
+  </data>
+ </layer>
+ <objectgroup color="#a45849" name="Event" width="50" height="50">
+  <properties>
+   <property name="dynamic" value=""/>
+  </properties>
+  <object name="Rea" type="Npc" x="1755" y="1230" width="64" height="96">
+   <properties>
+    <property name="sprite" value="003-Fighter03,false"/>
+   </properties>
+  </object>
+  <object name="Event3" type="trigger" x="1914" y="1466" width="74" height="74">
+   <properties>
+    <property name="map" value="testmap3"/>
+   </properties>
+  </object>
+  <object name="Slime" type="Enemy" x="1472" y="1280" width="64" height="64">
+   <properties>
+    <property name="Index" value="0"/>
+   </properties>
+  </object>
+  <object name="Ralph" type="Npc" x="1986" y="1278" width="64" height="96">
+   <properties>
+    <property name="image" value="001-Fighter01"/>
+   </properties>
+  </object>
+  <object name="Golem" type="Npc" x="1864" y="1015" width="64" height="96">
+   <properties>
+    <property name="image" value="098-Monster12"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup color="#ff0000" name="collision" width="50" height="50">
+  <object type="collision_rect" x="1472" y="1472" width="128" height="64"/>
+  <object type="collision_rect" x="1728" y="1472" width="128" height="64"/>
+  <object type="collision_rect" x="1344" y="1472" width="64" height="64"/>
+  <object type="collision_rect" x="1544" y="1736" width="49" height="176"/>
+  <object type="collision_rect" x="1739" y="1736" width="49" height="176"/>
+  <object type="collision_rect" x="1492" y="1630" width="25" height="33"/>
+  <object type="collision_rect" x="1812" y="1629" width="25" height="33"/>
+  <object type="collision_rect" x="1480" y="521" width="45" height="46"/>
+  <object type="collision_rect" x="1803" y="649" width="45" height="46"/>
+  <object type="collision_rect" x="2060" y="521" width="45" height="46"/>
+  <object type="collision_rect" x="1930" y="393" width="45" height="46"/>
+  <object type="collision_rect" x="2123" y="778" width="45" height="46"/>
+ </objectgroup>
+</map>
