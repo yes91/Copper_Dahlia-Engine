@@ -205,9 +205,6 @@
     <ClCompile Include="CommandComponent.cpp">
       <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
     </ClCompile>
-    <ClCompile Include="EditorState.cpp">
-      <Filter>Source Files\Game_Specific\States</Filter>
-    </ClCompile>
     <ClCompile Include="MapObjectComponent.cpp">
       <Filter>Source Files\Game_Specific\Map</Filter>
     </ClCompile>
@@ -637,9 +634,6 @@
     </ClInclude>
     <ClInclude Include="CommandComponent.h">
       <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
-    </ClInclude>
-    <ClInclude Include="EditorState.h">
-      <Filter>Source Files\Game_Specific\States</Filter>
     </ClInclude>
     <ClInclude Include="RepaintEvent.h">
       <Filter>Source Files\Game_Specific\Components\Component Events</Filter>

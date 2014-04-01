@@ -299,7 +299,6 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="DirectionComponent.cpp" />
     <ClCompile Include="DiscSpinLoadScreen.cpp" />
-    <ClCompile Include="EditorState.cpp" />
     <ClCompile Include="EmptyState.cpp" />
     <ClCompile Include="EmptyTransition.cpp" />
     <ClCompile Include="FadeInTransition.cpp" />
@@ -428,7 +427,6 @@
     <ClInclude Include="DelayProcess.h" />
     <ClInclude Include="DiscSpinLoadScreen.h" />
     <ClInclude Include="DrawEvent.h" />
-    <ClInclude Include="EditorState.h" />
     <ClInclude Include="EmptyState.h" />
     <ClInclude Include="EmptyTransition.h" />
     <ClInclude Include="EngineStd.h" />

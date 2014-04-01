@@ -26,6 +26,23 @@ public:
 		return std::pair<ListenerIter, DelegateIter>(it, --(it->second.end()));
 	}
 
+	/*
+	std::pair<ListenerIter, DelegateIter> addListener(object class, object delegate)
+	{
+		auto& list = listener_map[class.hash_code()];
+
+		PyFunction* func = new PyFunction();
+		func->callback = delegate;
+		std::unique_ptr<FunctionHolderBase> holder(func);
+
+		list.push_back(std::move(holder));
+
+		auto it = listener_map.find(class.hash_code());
+
+		return std::pair<ListenerIter, DelegateIter>(it, --(it->second.end()));
+	}
+	*/
+
 	bool removeListener(std::pair<ListenerIter, DelegateIter> delegate)
 	{
 		if(!listener_map.empty() && delegate.first != listener_map.end() && delegate.second != delegate.first->second.end()) 
@@ -45,7 +62,11 @@ public:
 		{
 			for(std::unique_ptr<FunctionHolderBase>& func : it->second)
 			{
+				/*
+				if(func->getType() != -1 && func-> getType() == 0)
+				*/
 				auto function = static_cast<Function<T>&>(*func).callback;
+				
 
 				function(event);
 			}

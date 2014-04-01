@@ -25,13 +25,9 @@ void MainMenuState::init(StateBasedGame& game)
 
 	std::vector<std::string> commands;
 	commands.push_back("New Game");
-
-#ifdef DEBUG
-	commands.push_back("Editor");
-#endif // DEBUG
-
 	commands.push_back("Continue");
 	commands.push_back("Exit");
+
 	win = std::unique_ptr<WindowCommand>(new WindowCommand(commands, 300, 1, 3, dispatch));
 	win->setPosition(1280.0f/2 - 150.0f, 720.0f - 270.0f);
 	win->setFocus(true);
@@ -54,10 +50,6 @@ void MainMenuState::init(StateBasedGame& game)
 	sandstorm_top = std::unique_ptr<ParallaxPlane>(new ParallaxPlane("res/Sandstorm_top.png", sf::Vector2f(1280.0f, 512.0f), sf::Vector2f(9.0f * 60.0f, 0.f)));
 
 	win->setAction(0, [&](){ game.enterState(0, std::unique_ptr<Transition>(new FadeInTransition()), std::unique_ptr<Transition>(new FadeOutTransition()));});
-
-#ifdef DEBUG
-	win->setAction(1, [&](){ game.enterState(10);});
-#endif // DEBUG
 
 	glFlush();
 

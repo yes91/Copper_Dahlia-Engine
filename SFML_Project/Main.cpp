@@ -40,9 +40,6 @@ int main()
 	game.addState(IGameState::ptr(new MapState()));
 
 	game.addState(IGameState::ptr(new OverlayTestState()));
-#ifdef DEBUG
-	game.addState(IGameState::ptr(new EditorState(game.getWindow())));
-#endif // DEBUG
 
 	game.run();
 
