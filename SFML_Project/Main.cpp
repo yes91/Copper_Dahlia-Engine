@@ -9,10 +9,6 @@
 #include "DiscSpinLoadScreen.h"
 #include "ThreadInfo.h"
 
-#ifdef DEBUG
-#include "EditorState.h"
-#endif // DEBUG
-
 #include <iostream>
 
 #include "TypeId.h"
