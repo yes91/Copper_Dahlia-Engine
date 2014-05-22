@@ -24,21 +24,28 @@ public:
 		acceleration = v_max * friction;
 		paused = false;
 
-		delegates.push_back(owner->addListener<MoveEvent>([this](MoveEvent e){ this->onMove(e);}));
+		owner->addListener<MoveEvent>(fastdelegate::MakeDelegate(this, &ActorPhysicsComponent::onMove));
 
-		delegates.push_back(owner->addListener<SizeChangedEvent>([this](SizeChangedEvent e){ this->onSizeChanged(e);}));
+		owner->addListener<SizeChangedEvent>(fastdelegate::MakeDelegate(this, &ActorPhysicsComponent::onSizeChanged));
 
-		delegates.push_back(owner->addListener<CollisionEvent>([this](CollisionEvent e){ this->onCollision(e);}));
+		owner->addListener<CollisionEvent>(fastdelegate::MakeDelegate(this, &ActorPhysicsComponent::onCollision));
 
-		owner->addGlobalListener<MapChangedEvent>([this](MapChangedEvent e){ this->onMapChanged(e);});
+	}
 
+	void registerEvents(EventDispatcher& dispatch)
+	{
+		m_pOwner->addGlobalListener<MapChangedEvent>(dispatch, fastdelegate::MakeDelegate(this, &ActorPhysicsComponent::onMapChanged));
+	}
+
+	void unregisterEvents(EventDispatcher& dispatch)
+	{
+		m_pOwner->removeGlobalListener<MapChangedEvent>(dispatch, fastdelegate::MakeDelegate(this, &ActorPhysicsComponent::onMapChanged));
 	}
 
 	static void create(GameObject* owner, const pugi::xml_node& node)
 	{
 		if(node.attribute("value"))
 		{
-			std::cout << "Processing ActorPhysicsComponent arguments..." << std::endl;
 			std::string values = node.attribute("value").as_string();
 			std::stringstream datastream(values);
 			

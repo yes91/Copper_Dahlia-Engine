@@ -63,7 +63,9 @@ void MapState::init(StateBasedGame& game)
 
 	sort_pred = [](std::shared_ptr<GameObject> o1, std::shared_ptr<GameObject> o2) { return o1->getPosition().y < o2->getPosition().y; };
 
-	player = GameObjectFactory::getInstance().create("res/data/Player.xml", dispatch);
+	player = game.getObject("Player");
+
+	player->registerEvents(dispatch);
 
 	player->setPosition(100.0f, 100.f);
 	
@@ -99,12 +101,14 @@ void MapState::init(StateBasedGame& game)
 		}
 	}
 
-	auto mover = std::make_shared<GameObject>(dispatch);
+	auto mover = std::make_shared<GameObject>();
 
 	mover->add<ActorPhysicsComponent>(sf::Vector2f(0.0f, 0.0f), 400.0f, 0.6f);
 	mover->add<DirectionComponent>(DirectionComponent::S);
 	mover->add<RandomMoveComponent>();
 	mover->add<ActorSpriteComponent>("res/003-Fighter03.png", false);
+
+	mover->registerEvents(dispatch);
 
 	mover->setPosition(100.f, 300.f);
 

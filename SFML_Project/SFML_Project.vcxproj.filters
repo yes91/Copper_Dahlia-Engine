@@ -107,6 +107,27 @@
     <Filter Include="Source Files\Game_Specific\Transitions">
       <UniqueIdentifier>{d50f73c4-c661-423a-a06a-30fa2fe39bff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Engine\Event\FastDelegate">
+      <UniqueIdentifier>{25672f6e-68bf-4d9b-85b4-7d90365b67c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game_Specific\python">
+      <UniqueIdentifier>{4e461341-8964-443b-8db9-2fcf8861ffb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Python">
+      <UniqueIdentifier>{dad09f9b-8e90-4071-a7cd-170049346027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Python\Threading">
+      <UniqueIdentifier>{61e73c3f-315f-4fd6-a4ad-3debc4474c8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Python\Exports">
+      <UniqueIdentifier>{4691795f-e683-4b33-b65c-ab811f2890a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Python\Exports\Core">
+      <UniqueIdentifier>{c8db6245-65b2-4e25-ba59-48a8b72cb3fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Python\Exports\SFML">
+      <UniqueIdentifier>{2803d869-2d50-4c59-98a7-36491a2e0c49}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -210,6 +231,18 @@
     </ClCompile>
     <ClCompile Include="CollisionShape.cpp">
       <Filter>Source Files\Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PythonState.cpp">
+      <Filter>Source Files\Engine\Python</Filter>
+    </ClCompile>
+    <ClCompile Include="Core.cpp">
+      <Filter>Source Files\Engine\Python\Exports\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Sfml.cpp">
+      <Filter>Source Files\Engine\Python\Exports\SFML</Filter>
+    </ClCompile>
+    <ClCompile Include="EventDispatcher.cpp">
+      <Filter>Source Files\Engine\Event</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -440,6 +473,9 @@
     </None>
     <None Include="lua\SceneMap.lua">
       <Filter>Source Files\Game_Specific\Lua</Filter>
+    </None>
+    <None Include="test_state.py">
+      <Filter>Source Files\Game_Specific\python</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -676,6 +712,21 @@
     </ClInclude>
     <ClInclude Include="BattleSpriteComponent.h">
       <Filter>Source Files\Game_Specific\Components\Derived Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FastDelegate.h">
+      <Filter>Source Files\Engine\Event\FastDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="FastDelegateBind.h">
+      <Filter>Source Files\Engine\Event\FastDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="AcquireGIL.h">
+      <Filter>Source Files\Engine\Python\Threading</Filter>
+    </ClInclude>
+    <ClInclude Include="PythonState.h">
+      <Filter>Source Files\Engine\Python</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

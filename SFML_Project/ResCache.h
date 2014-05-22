@@ -66,8 +66,6 @@ protected:
 
 		R* res = new R();
 
-		decltype(R::loadFromFile) type;
-
 		if(!res->loadFromFile(name)) 
 		{
 			std::cerr << "Resource load failure. Type: " << TypeId<R>::name() << " Path: " << name << std::endl;
@@ -96,7 +94,7 @@ protected:
 
 		if(!res->loadFromFile(name, arg2))
 		{
-			std::cerr << "Resource load failure. Type: " << typeid(R).name() << " Path: " << name << std::endl;
+			std::cerr << "Resource load failure. Type: " << TypeId<R>::name() << " Path: " << name << std::endl;
 		}
 
 		handle = shared_ptr< ResHandle< R > >(

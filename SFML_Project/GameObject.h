@@ -9,7 +9,7 @@
 
 class Component;
 
-class GameObject : public sf::Transformable, public EventListener
+class GameObject : public sf::Transformable
 {
 public:
 
@@ -18,18 +18,41 @@ public:
 	EventDispatcher m_dispatch;
 	
 	template<class T>
-	std::pair<ListenerIter, DelegateIter> addListener(std::function<void(T)> delegate)
+	void addListener(fastdelegate::FastDelegate1<T, void> delegate)
 	{
-		return m_dispatch.addListener<T>(delegate);
+		m_dispatch.addListener<T>(delegate);
 	}
 
 	template<class T>
-	void addGlobalListener(std::function<void(T)> delegate)
+	void addGlobalListener(EventDispatcher& dispatch, fastdelegate::FastDelegate1<T, void> delegate)
 	{
-		delegates.push_back(dispatch.addListener<T>(delegate));
+		dispatch.addListener<T>(delegate);
 	}
 
-	bool removeListener(std::pair<ListenerIter, DelegateIter> delegate)
+	template<class T>
+	void removeGlobalListener(EventDispatcher& dispatch, fastdelegate::FastDelegate1<T, void> delegate)
+	{
+		dispatch.removeListener<T>(delegate);
+	}
+
+	void registerEvents(EventDispatcher& dispatch)
+	{
+		for (Component* comp : components)
+		{
+			comp->registerEvents(dispatch);
+		}
+	}
+
+	void unregisterEvents(EventDispatcher& dispatch)
+	{
+		for (Component* comp : components)
+		{
+			comp->unregisterEvents(dispatch);
+		}
+	}
+
+	template<class T>
+	bool removeListener(fastdelegate::FastDelegate1<T, void> delegate)
 	{
 		return m_dispatch.removeListener(delegate);
 	}
@@ -159,8 +182,7 @@ public:
 		this->triggerEvent(e);
 	}
 
-	GameObject(EventDispatcher& disp)
-		:EventListener(disp)
+	GameObject()
 	{
 		
 	}

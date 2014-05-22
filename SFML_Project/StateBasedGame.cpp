@@ -4,6 +4,7 @@
 #include "EmptyTransition.h"
 #include "EmptyState.h"
 #include "ILoadScreen.h"
+#include <boost\python.hpp>
 #include <sstream>
 
 #ifdef DEBUG
@@ -16,6 +17,8 @@ namespace Debug
 StateBasedGame::StateBasedGame(std::string title)
 {
 	states = std::hash_map<int, IGameState::ptr>();
+	objects = std::hash_map<std::string, std::shared_ptr<GameObject>>();
+
 	currentState = IGameState::ptr(new EmptyState());
 	nextState = nullptr;
 
@@ -104,8 +107,12 @@ void StateBasedGame::update(sf::RenderWindow& container, float dt)
 			currentState = nextState;
 			if(!currentState->isInitialized())
 			{
-				std::thread loader([&](){ currentState->init(*this); });
-				loader.detach();
+				bool done = false;
+				container.setActive(false);
+				std::thread loader([&](){ m_load_screen->run(container, done); });
+				currentState->init(*this);
+				done = true;
+				loader.join();
 			}
 			nextState = nullptr;
 			leaveTransition = nullptr;
@@ -118,12 +125,6 @@ void StateBasedGame::update(sf::RenderWindow& container, float dt)
 		{
 			return;
 		}
-	}
-
-	if(!currentState->isInitialized())
-	{
-		m_load_screen->update(dt);
-		return;
 	}
 
 	if (enterTransition) {
@@ -157,12 +158,6 @@ void StateBasedGame::render(sf::RenderWindow& g, float alpha)
 		enterTransition->preRender(g, *this);
 	}
 
-	if(!currentState->isInitialized())
-	{
-		m_load_screen->render(g);
-		return;
-	}
-
 	if(!currentState->isPaused())
 	{
 		currentState->render(g, alpha);
@@ -177,9 +172,20 @@ void StateBasedGame::render(sf::RenderWindow& g, float alpha)
 	}
 }
 
+std::shared_ptr<GameObject> StateBasedGame::getObject(std::string name)
+{
+	return objects[name];
+}
+
+void StateBasedGame::addObject(std::string name, std::shared_ptr<GameObject> o)
+{
+	objects[name] = o;
+}
+
 void StateBasedGame::addState(IGameState::ptr state)
 {
 	states[state->getID()] = state;
+	std::cout << states[state->getID()].use_count() << std::endl;
 }
 
 IGameState::ptr StateBasedGame::getState(int id)

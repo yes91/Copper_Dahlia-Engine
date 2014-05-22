@@ -44,19 +44,18 @@ public:
 		map[name] = &T::create;
 	}
 
-	std::shared_ptr<GameObject> create(const std::string& file, EventDispatcher& disp)
+	std::shared_ptr<GameObject> create(const std::string& file)
 	{
 		pugi::xml_document mapDoc;
 		pugi::xml_parse_result result = mapDoc.load_file(file.c_str());
 
 		pugi::xml_node node = mapDoc.child("GameObject");
 
-		auto obj = std::make_shared<GameObject>(disp);
+		auto obj = std::make_shared<GameObject>();
 
 		for(pugi::xml_node& child : node.children())
 		{
 			std::string name = child.attribute("name").as_string();
-			std::cout << name << std::endl;
 			auto func = map[name];
 
 			func(obj.get(), child);

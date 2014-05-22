@@ -122,8 +122,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\Debug;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Python33\include;$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(SolutionDir)\References\boost\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\boost\lib;C:\Python33\libs;$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\Debug;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -132,18 +132,18 @@
     <LinkIncremental />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Python33\include;$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(SolutionDir)\References\boost\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\boost\lib;C:\Python33\libs;$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Profile|Win32'">
-    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Python33\include;$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(SolutionDir)\References\boost\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\boost\lib;C:\Python33\libs;$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDebug|Win32'">
-    <IncludePath>$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Python33\include;$(SolutionDir)\References\TGUI\include;$(SolutionDir)\References\SFML-2.1\include;$(SolutionDir)\References\zlib\include;$(SolutionDir)\References\boost\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\References\boost\lib;C:\Python33\libs;$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib;$(SolutionDir)\References\zlib\lib;$(LibraryPath)</LibraryPath>
     <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -162,13 +162,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;DEBUG;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_PYTHON_STATIC_MODULE;_DEBUG;DEBUG;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>tgui-d.lib;zdll.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-system-d.lib;sfml-window-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)opengl32.lib;glu32.lib;</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\$(Configuration);</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\References\boost\lib;$(SolutionDir)\References\TGUI\lib;$(SolutionDir)\References\SFML-2.1\lib\$(Configuration);</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -193,7 +193,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_PYTHON_STATIC_MODULE;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -209,7 +209,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>DEBUG;SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_PYTHON_STATIC_MODULE;DEBUG;SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -226,7 +226,7 @@
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>DEBUG;SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>BOOST_PYTHON_STATIC_MODULE;DEBUG;SFML_STATIC;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>OldStyle</DebugInformationFormat>
     </ClCompile>
     <Link>
@@ -297,10 +297,12 @@
     <ClCompile Include="CollisionShape.cpp" />
     <ClCompile Include="CommandComponent.cpp" />
     <ClCompile Include="Component.cpp" />
+    <ClCompile Include="Core.cpp" />
     <ClCompile Include="DirectionComponent.cpp" />
     <ClCompile Include="DiscSpinLoadScreen.cpp" />
     <ClCompile Include="EmptyState.cpp" />
     <ClCompile Include="EmptyTransition.cpp" />
+    <ClCompile Include="EventDispatcher.cpp" />
     <ClCompile Include="FadeInTransition.cpp" />
     <ClCompile Include="FadeOutTransition.cpp" />
     <ClCompile Include="GameEventDispatcher.cpp" />
@@ -317,9 +319,11 @@
     <ClCompile Include="PlayerControlComponent.cpp" />
     <ClCompile Include="ProcessMananger.cpp" />
     <ClCompile Include="pugixml\pugixml.cpp" />
+    <ClCompile Include="PythonState.cpp" />
     <ClCompile Include="QuadTreeNode.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="RandomMoveComponent.cpp" />
+    <ClCompile Include="Sfml.cpp" />
     <ClCompile Include="StateBasedGame.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="Window.cpp" />
@@ -408,8 +412,10 @@
     <None Include="res\yuan_2.png" />
     <None Include="res\yuan_3.png" />
     <None Include="sansation.ttf" />
+    <None Include="test_state.py" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AcquireGIL.h" />
     <ClInclude Include="ActorSpriteComponent.h" />
     <ClInclude Include="AnimatedSprite.h" />
     <ClInclude Include="Animation.h" />
@@ -420,6 +426,9 @@
     <ClInclude Include="CommandEndedEvent.h" />
     <ClInclude Include="CommandStart.h" />
     <ClInclude Include="CollisionShape.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="FastDelegate.h" />
+    <ClInclude Include="FastDelegateBind.h" />
     <ClInclude Include="IPhysicsComponent.h" />
     <ClInclude Include="MapTile.h" />
     <ClInclude Include="PhysicsComponentBase.h" />
@@ -469,6 +478,7 @@
     <ClInclude Include="ProcessManager.h" />
     <ClInclude Include="pugixml\pugiconfig.hpp" />
     <ClInclude Include="pugixml\pugixml.hpp" />
+    <ClInclude Include="PythonState.h" />
     <ClInclude Include="QuadTreeNode.h" />
     <ClInclude Include="Random.h" />
     <ClInclude Include="RandomMoveComponent.h" />

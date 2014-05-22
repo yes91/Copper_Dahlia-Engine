@@ -6,6 +6,10 @@
 
 #define PI 3.14159265f
 
+#include "Registrar.h"
+
+Registrar<RandomMoveComponent> registrar;
+
 sf::Vector2f RandomMoveComponent::getMove()
 {
 

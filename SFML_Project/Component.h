@@ -16,7 +16,10 @@ public:
 	virtual void update(sf::RenderTarget& container, float dt) = 0;
 	virtual unsigned int getType() const = 0;
 	virtual unsigned int getDerivedType() const { return 0; }
+
+	virtual void registerEvents(EventDispatcher& dispatch) { }
+	virtual void unregisterEvents(EventDispatcher& dispatch) { }
+
 protected:
 	GameObject* m_pOwner;
-	std::vector<std::pair<ListenerIter, DelegateIter>> delegates;
 };

@@ -10,8 +10,8 @@
 CommandComponent::CommandComponent(GameObject* owner)
 	:ComponentBase(owner)
 {
-	delegates.push_back(owner->addListener<TriggerEnteredEvent>([this](TriggerEnteredEvent e){ this->onTriggerEntered(e);}));
-	delegates.push_back(owner->addListener<CommandEndedEvent>([this](CommandEndedEvent e){ this->onCommandEnd(e); }));
+	owner->addListener<TriggerEnteredEvent>(fastdelegate::MakeDelegate(this, &CommandComponent::onTriggerEntered));
+	owner->addListener<CommandEndedEvent>(fastdelegate::MakeDelegate(this, &CommandComponent::onCommandEnd));
 	running = false;
 }
 

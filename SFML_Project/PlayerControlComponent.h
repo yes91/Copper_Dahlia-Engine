@@ -18,9 +18,7 @@ public:
 	{
 		if(node.attribute("value"))
 		{
-			std::cout << "Processing PlayerControlComponent arguments..." << std::endl;
 			int i = node.attribute("value").as_int();
-			std::cout << i << std::endl;
 			owner->add<PlayerControlComponent>(i);
 		}
 	}

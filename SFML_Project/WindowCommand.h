@@ -18,7 +18,7 @@ public:
 	{
 		font = MultiResCache::getInstance().GetHandle<sf::Font>("sansation.ttf");
 
-		delegates.push_back(disp.addListener<KeyPressedEvent>([this](KeyPressedEvent e){ this->onKeyPressed(e);}));
+		disp.addListener<KeyPressedEvent>(fastdelegate::MakeDelegate(this, &WindowCommand::onKeyPressed));
 
 		text.setCharacterSize(18);
 		text.setFont(font->get());

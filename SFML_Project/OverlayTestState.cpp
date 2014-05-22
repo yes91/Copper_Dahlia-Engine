@@ -1,9 +1,12 @@
 #include "OverlayTestState.h"
+
+#include "MapChangedEvent.h"
+
 #include "PlayerControlComponent.h"
-#include "ActorPhysicsComponent.h"
-#include "ActorSpriteComponent.h"
-#include "RandomMoveComponent.h"
+
 #include "StateBasedGame.h"
+
+#include "GameObjectFactory.h"
 
 int OverlayTestState::getID()
 {
@@ -17,21 +20,13 @@ OverlayTestState::OverlayTestState()
 
 void OverlayTestState::init(StateBasedGame& game)
 {
-	auto player = std::make_shared<GameObject>(dispatch);
+	auto player = GameObjectFactory::getInstance().create("res/data/Player.xml");
 
-	player->add<ActorPhysicsComponent>(sf::Vector2f(0.0f, 0.0f), 400.0f, 0.6f);
-	player->add<DirectionComponent>(DirectionComponent::S);
-	player->add<PlayerControlComponent>(1);
-	player->add<RandomMoveComponent>();
-	player->add<ActorSpriteComponent>("res/001-Fighter01.png", false);
+	player->registerEvents(dispatch);
 
-	auto mover = std::make_shared<GameObject>(dispatch);
+	auto mover = GameObjectFactory::getInstance().create("res/data/Mover.xml");
 
-	mover->add<ActorPhysicsComponent>(sf::Vector2f(0.0f, 0.0f), 400.0f, 0.6f);
-	mover->add<DirectionComponent>(DirectionComponent::S);
-	mover->add<RandomMoveComponent>();
-	mover->add<ActorSpriteComponent>("res/003-Fighter03.png", false);
-
+	mover->registerEvents(dispatch);
 
 	player->setPosition(1280.0f/2.0f, 720.0f/2.0f);
 	mover->setPosition(1280.0f/2.0f, 720.0f/2.0f);
@@ -45,12 +40,9 @@ void OverlayTestState::init(StateBasedGame& game)
 
 	for(int i = 0; i < 10; i++)
 	{
-		auto obj = std::make_shared<GameObject>(dispatch);
-
-		obj->add<ActorPhysicsComponent>(sf::Vector2f(0.0f, 0.0f), 400.0f, 0.6f);
-		obj->add<DirectionComponent>(DirectionComponent::S);
-		obj->add<RandomMoveComponent>();
-		obj->add<ActorSpriteComponent>("res/003-Fighter03.png", false);
+		auto obj = GameObjectFactory::getInstance().create("res/data/Mover.xml");
+		
+		obj->registerEvents(dispatch);
 
 		obj->setPosition(sf::Vector2f(1280.0f/2.0f, 720.0f/2.0f));
 		game_objects.push_back(obj);
@@ -61,8 +53,6 @@ void OverlayTestState::init(StateBasedGame& game)
 	e.bounds = sf::Vector2f(1280, 720);
 
 	dispatch.triggerEvent(e);
-
-	
 
 	initialized = true;
 }

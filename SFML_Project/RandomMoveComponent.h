@@ -5,11 +5,20 @@
 #include "Random.h"
 #include <random>
 
+#include "pugixml\pugixml.hpp"
+
+#include "GameObject.h"
+
 class RandomMoveComponent : public MoveComponentBase<RandomMoveComponent>
 {
 public:
 
 	RandomMoveComponent(GameObject* owner) :MoveComponentBase(owner) { move_time = 0.f; rand.SeedMT(std::rand()); }
+
+	static void create(GameObject* owner, const pugi::xml_node& node)
+	{
+		owner->add<RandomMoveComponent>();
+	}
 
 	void update(sf::RenderTarget& container, float dt);
 

@@ -41,9 +41,9 @@ public:
 
 		sprite.setAnimation(animations[0]);
 
-		delegates.push_back(owner->addListener<DrawEvent>([this](DrawEvent e){ this->onDraw(e);}));
-		delegates.push_back(owner->addListener<MoveEvent>([this](MoveEvent e){ this->onMove(e);}));
-		delegates.push_back(owner->addListener<HeadingChangedEvent>([this](HeadingChangedEvent e){ this->onChangeDirection(e);}));
+		owner->addListener<DrawEvent>(fastdelegate::MakeDelegate(this, &ActorSpriteComponent::onDraw));
+		owner->addListener<MoveEvent>(fastdelegate::MakeDelegate(this, &ActorSpriteComponent::onMove));
+		owner->addListener<HeadingChangedEvent>(fastdelegate::MakeDelegate(this, &ActorSpriteComponent::onChangeDirection));
 
 		float S_width = this->getLocalBounds().width;
 		float S_height = this->getLocalBounds().height;
@@ -59,7 +59,6 @@ public:
 	{
 		if(node.attribute("value"))
 		{
-			std::cout << "Processing ActorSpriteComponent arguments..." << std::endl;
 			std::string values = node.attribute("value").as_string();
 			std::stringstream datastream(values);
 			
@@ -75,8 +74,6 @@ public:
 
 			pugi::xml_attribute two;
 			two.set_value(args[1].c_str());
-
-			std::cout << args[0].c_str() << ":" << two.as_bool() << std::endl;
 
 			owner->add<ActorSpriteComponent>(args[0].c_str(), two.as_bool());
 		}

@@ -27,14 +27,24 @@ public:
 		type_delay = 0.0f;
 	}
 
-	MessageProcess* clone() { auto c = new MessageProcess(*this); c->m_pChild = std::shared_ptr<Process>(m_pChild->clone()); return c; }
+	~MessageProcess()
+	{
+		dispatch.removeListener<DrawEvent>(fastdelegate::MakeDelegate(this, &MessageProcess::onDraw));
+	}
+
+	MessageProcess* clone() 
+	{ 
+		auto c = new MessageProcess(*this); 
+		c->m_pChild = std::shared_ptr<Process>(m_pChild->clone());
+		return c; 
+	}
 
 protected:
 
 	virtual void init()
 	{
 		EventProcess::init();
-		delegates.push_back(dispatch.addListener<DrawEvent>([this](DrawEvent e){ this->onDraw(e);}));
+		dispatch.addListener<DrawEvent>(fastdelegate::MakeDelegate(this, &MessageProcess::onDraw));
 	}
 
 	virtual void update(float dt)

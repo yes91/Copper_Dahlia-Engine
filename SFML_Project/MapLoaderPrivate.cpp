@@ -468,7 +468,9 @@ bool MapLoader::m_ParseObjectgroup(const pugi::xml_node& groupNode, EventDispatc
 			return false;
 		}
 		
-		auto go = std::make_shared<GameObject>(dispatch);
+		auto go = std::make_shared<GameObject>();
+
+		go->registerEvents(dispatch);
 
 		//set position
 		sf::Vector2f position(objectNode.attribute("x").as_float(),

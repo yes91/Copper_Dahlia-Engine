@@ -10,6 +10,7 @@ class Transition;
 class ILoadScreen;
 class EventDispatcher;
 class ProcessManager;
+class GameObject;
 
 #ifdef DEBUG
 namespace Debug 
@@ -30,6 +31,10 @@ public:
 	void update(sf::RenderWindow& container, float dt);
 
 	void render(sf::RenderWindow& g, float alpha);
+
+	std::shared_ptr<GameObject> getObject(std::string name);
+
+	void addObject(std::string name, std::shared_ptr<GameObject> o);
 
 	void addState(IGameState::ptr state);
 
@@ -67,11 +72,7 @@ private:
 	std::unique_ptr<Transition> enterTransition;
 	std::unique_ptr<Transition> leaveTransition;
 
-	sf::RectangleShape screen;
-	sf::Text text;
-	Resource<sf::Font>::type font;
-	Resource<sf::Texture>::type spinner;
-	sf::Sprite cd_sprite;
+	std::hash_map<std::string, std::shared_ptr<GameObject>> objects;
 
 	sf::RenderWindow window;
 	WindowState winState;

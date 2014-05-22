@@ -40,7 +40,7 @@ public:
 	DirectionComponent(GameObject* owner, Direction d)
 		:ComponentBase(owner), heading(d)
 	{
-		delegates.push_back(owner->addListener<MoveEvent>([this](MoveEvent e) { this->onMove(e);}));
+		owner->addListener<MoveEvent>(fastdelegate::MakeDelegate(this, &DirectionComponent::onMove));
 	}
 
 	static void create(GameObject* owner, const pugi::xml_node& node)
